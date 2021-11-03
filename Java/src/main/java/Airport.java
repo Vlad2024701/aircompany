@@ -87,22 +87,8 @@ public class Airport {
         return this;
     }
 
-    public Airport sortByMaxLoadCapacity() {
-        planes.sort(Comparator.comparingInt(Plane::getMaxLoadCapacity));
-        return this;
-    }
-
     public List<Plane> getPlanes() {
         return (List<Plane>) planes;
-    }
-
-    ////////////zachem////////
-    private void print(Collection<? extends Plane> collection) {
-        Iterator<? extends Plane> iterator = collection.iterator();
-        while (iterator.hasNext()) {
-            Plane plane = iterator.next();
-            System.out.println(plane);
-        }
     }
 
     @Override
@@ -112,7 +98,6 @@ public class Airport {
                 '}';
     }
 
-    //Constructor
     public Airport(List<? extends Plane> planes) {
         this.planes = planes;
     }
