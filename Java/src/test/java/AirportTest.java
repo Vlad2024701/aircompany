@@ -57,7 +57,7 @@ public class AirportTest {
     @Test
     public void testSortPlaneByMaxLoadCapacity() {
         Airport airport = new Airport(planes);
-        List<? extends Plane> planesSortedByMaxLoadCapacity = airport.getPlanes();
+        List<? extends Plane> planesSortedByMaxLoadCapacity = airport.sortByMaxLoadCapacity().getPlanes();
 
         boolean nextPlaneMaxLoadCapacityIsHigherThanCurrent = false;
         for (int i = 0; i < planesSortedByMaxLoadCapacity.size() - 1; i++) {

@@ -87,6 +87,11 @@ public class Airport {
         return this;
     }
 
+    public Airport sortByMaxLoadCapacity(){
+        planes.sort(Comparator.comparingInt(Plane::getMaxLoadCapacity));
+        return this;
+    }
+
     public List<Plane> getPlanes() {
         return (List<Plane>) planes;
     }
